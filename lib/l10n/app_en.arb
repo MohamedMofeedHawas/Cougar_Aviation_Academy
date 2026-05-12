@@ -1,0 +1,16 @@
+{
+  "@@locale": "en",
+  "appTitle": "Cougar Aviation Academy",
+  "login": "Login",
+  "register": "Register",
+  "email": "Email Address",
+  "password": "Password",
+  "fullName": "Full Name",
+  "home": "Home",
+  "aboutUs": "About Us",
+  "courses": "Courses",
+  "fleet": "Fleet",
+  "gallery": "Gallery",
+  "contact": "Contact",
+  "profile": "Profile"
+}

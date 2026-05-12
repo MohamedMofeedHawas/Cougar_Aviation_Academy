@@ -1,0 +1,92 @@
+name: cougar_app
+description: "A premium aviation academy application."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+  # Localization
+  intl: ^0.20.2
+
+  # State Management
+  flutter_bloc: any
+  equatable: any
+  get_it: any
+
+  # Routing
+  go_router: ^14.2.0
+
+  # Local Database
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.3
+
+  # Serialization
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Network & Images
+  dio: ^5.5.0
+  cached_network_image: ^3.3.1
+  url_launcher: ^6.3.0
+
+  # Animations
+  shimmer: ^3.0.0
+  lottie: ^3.1.2
+  flutter_animate: ^4.5.0
+  animate_do: ^3.3.4
+  animations: ^2.0.11
+
+  # Responsive UI
+  flutter_screenutil: ^5.9.3
+  responsive_framework: ^1.4.0
+
+  # Maps
+  google_maps_flutter: ^2.7.0
+
+  # UI
+  smooth_page_indicator: ^1.1.0
+  google_fonts: ^6.2.1
+  visibility_detector: ^0.4.0+2
+  font_awesome_flutter: ^10.7.0
+  flutter_svg: ^2.0.10+1
+
+  # Storage & Security
+  crypto: ^3.0.3
+  uuid: ^4.4.0
+
+  # Files & Paths
+  path_provider: ^2.1.4
+  file_picker: ^8.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.2
+
+  # Code Generation
+  build_runner: any
+  freezed: any
+  json_serializable: any
+  hive_generator: any
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/cougar_img.png
+    - assets/images/image.png
+ 
