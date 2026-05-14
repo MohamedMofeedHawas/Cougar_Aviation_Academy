@@ -190,13 +190,17 @@ class _WelcomePage extends StatelessWidget {
     final size = MediaQuery.sizeOf(context);
     final pad = _R.pad(context);
 
-    return SingleChildScrollView(
-      physics: const NeverScrollableScrollPhysics(),
-      child: SizedBox(
-        height: size.height,
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(pad, size.height * 0.20, pad, 140),
-          child: SingleChildScrollView(
+    return  CustomScrollView(
+      physics: const BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(
+              pad,
+              size.height * 0.20,
+              pad,
+              140,
+            ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -205,10 +209,13 @@ class _WelcomePage extends StatelessWidget {
                   controller: entrance,
                   delay: 0.0,
                   end: 0.4,
-                  child: const _Eyebrow('COUGAR AVIATION ACADEMY'),
+                  child: const _Eyebrow(
+                    'COUGAR AVIATION ACADEMY',
+                  ),
                 ),
+
                 SizedBox(height: size.height * 0.022),
-            
+
                 _FadeSlide(
                   controller: entrance,
                   delay: 0.1,
@@ -216,19 +223,23 @@ class _WelcomePage extends StatelessWidget {
                   child: Text(
                     'Welcome Aboard.',
                     style: TextStyle(
-                      fontSize: _R.fs(context, 50),
+                      fontSize: _R.fs(context, 40),
                       fontWeight: FontWeight.w900,
                       height: 1.0,
                       letterSpacing: -1.5,
                       color: Colors.white,
                       shadows: [
-                        Shadow(color: _kYellow.withOpacity(0.2), blurRadius: 30),
+                        Shadow(
+                          color: _kYellow.withOpacity(0.2),
+                          blurRadius: 30,
+                        ),
                       ],
                     ),
                   ),
                 ),
+
                 SizedBox(height: size.height * 0.028),
-            
+
                 _FadeSlide(
                   controller: entrance,
                   delay: 0.25,
@@ -238,13 +249,17 @@ class _WelcomePage extends StatelessWidget {
                     height: 2,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [_kYellow, _kYellow.withOpacity(0)],
+                        colors: [
+                          _kYellow,
+                          _kYellow.withOpacity(0),
+                        ],
                       ),
                     ),
                   ),
                 ),
+
                 SizedBox(height: size.height * 0.022),
-            
+
                 _FadeSlide(
                   controller: entrance,
                   delay: 0.3,
@@ -259,8 +274,9 @@ class _WelcomePage extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 SizedBox(height: size.height * 0.032),
-            
+
                 _FadeSlide(
                   controller: entrance,
                   delay: 0.45,
@@ -275,10 +291,9 @@ class _WelcomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-            
-               // const Spacer(),
-               const SizedBox(height: 15),
-            
+
+                const SizedBox(height: 15),
+
                 _FadeSlide(
                   controller: entrance,
                   delay: 0.6,
@@ -287,21 +302,25 @@ class _WelcomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: _kYellow.withOpacity(0.2)),
+                      border: Border.all(
+                        color: _kYellow.withOpacity(0.2),
+                      ),
                       color: _kYellow.withOpacity(0.05),
                     ),
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Icon(
                           Icons.format_quote_rounded,
                           color: _kYellow.withOpacity(0.6),
                           size: 20,
                         ),
+
                         const SizedBox(width: 10),
-                        const SizedBox(height: 15,),
+
                         Expanded(
                           child: Text(
-                            'With us, you don\’t just earn a license — you build a career, guided by integrity, excellence, and passion for aviation.',
+                            'With us, you don’t just earn a license — you build a career, guided by integrity, excellence, and passion for aviation.',
                             style: TextStyle(
                               fontSize: _R.fs(context, 12.5),
                               fontStyle: FontStyle.italic,
@@ -319,7 +338,7 @@ class _WelcomePage extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      ],
     );
   }
 }
@@ -355,66 +374,90 @@ class _WhyPage extends StatelessWidget {
     final size = MediaQuery.sizeOf(context);
     final pad = _R.pad(context);
 
-    return Padding(
-      padding: EdgeInsets.fromLTRB(pad, size.height * 0.19, pad, 140),
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _FadeSlide(
-              controller: entrance,
-              delay: 0.0,
-              end: 0.4,
-              child: const _Eyebrow('OUR COMMITMENT TO YOU'),
-            ),
-            SizedBox(height: size.height * 0.016),
-            _FadeSlide(
-              controller: entrance,
-              delay: 0.08,
-              end: 0.5,
-              child: Text(
-                'Why Cougar ?',
-                style: TextStyle(
-                  fontSize: _R.fs(context, 50),
-                  fontWeight: FontWeight.w900,
-                  height: 1.02,
-                  letterSpacing: -1,
-                  color: Colors.white,
+    return CustomScrollView(
+      slivers: [
+        SliverPadding(
+          padding: EdgeInsets.fromLTRB(
+            pad,
+            size.height * 0.19,
+            pad,
+            140,
+          ),
+          sliver: SliverToBoxAdapter(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _FadeSlide(
+                  controller: entrance,
+                  delay: 0.0,
+                  end: 0.4,
+                  child: const _Eyebrow(
+                    'OUR COMMITMENT TO YOU',
+                  ),
                 ),
-              ),
-            ),
-            SizedBox(height: size.height * 0.012),
-            _FadeSlide(
-              controller: entrance,
-              delay: 0.18,
-              end: 0.6,
-              child: Text(
-                'At Cougar Aviation Academy, we believe in a journey that starts simple and transparent — and grows into full professionalism.',
-                style: TextStyle(
-                  fontSize: _R.fs(context, 13),
-                  height: 1.65,
-                  color: Colors.white.withOpacity(0.6),
+
+                SizedBox(height: size.height * 0.016),
+
+                _FadeSlide(
+                  controller: entrance,
+                  delay: 0.08,
+                  end: 0.5,
+                  child: Text(
+                    'Why Cougar ?',
+                    style: TextStyle(
+                      fontSize: _R.fs(context, 40),
+                      fontWeight: FontWeight.w900,
+                      height: 1.02,
+                      letterSpacing: -1,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            SizedBox(height: size.height * 0.028),
-            ..._points.asMap().entries.map((e) {
-              final i = e.key;
-              final p = e.value;
-              return _FadeSlide(
-                controller: entrance,
-                delay: 0.2 + i * 0.18,
-                end: (0.6 + i * 0.12).clamp(0.0, 1.0),
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: size.height * 0.016),
-                  child: _WhyCard(icon: p.$1, title: p.$2, body: p.$3),
+
+                SizedBox(height: size.height * 0.012),
+
+                _FadeSlide(
+                  controller: entrance,
+                  delay: 0.18,
+                  end: 0.6,
+                  child: Text(
+                    'At Cougar Aviation Academy, we believe in a journey that starts simple and transparent — and grows into full professionalism.',
+                    style: TextStyle(
+                      fontSize: _R.fs(context, 13),
+                      height: 1.65,
+                      color: Colors.white.withOpacity(0.6),
+                    ),
+                  ),
                 ),
-              );
-            }),
-          ],
+
+                SizedBox(height: size.height * 0.028),
+
+                ..._points.asMap().entries.map((e) {
+                  final i = e.key;
+                  final p = e.value;
+
+                  return Padding(
+                    padding: EdgeInsets.only(
+                      bottom: size.height * 0.016,
+                    ),
+                    child: _FadeSlide(
+                      controller: entrance,
+                      delay: 0.2 + i * 0.18,
+                      end: (0.6 + i * 0.12).clamp(0.0, 1.0),
+                      child: _WhyCard(
+                        icon: p.$1,
+                        title: p.$2,
+                        body: p.$3,
+                      ),
+                    ),
+                  );
+                }),
+              ],
+            ),
+          ),
         ),
-      ),
+      ],
     );
   }
 }
@@ -548,7 +591,7 @@ class _ServicesPage extends StatelessWidget {
                   child: Text(
                     'Cougar Services.',
                     style: TextStyle(
-                      fontSize: _R.fs(context, 50),
+                      fontSize: _R.fs(context, 40),
                       fontWeight: FontWeight.w900,
                       height: 1.02,
                       letterSpacing: -1,
@@ -587,11 +630,11 @@ class _ServicesPage extends StatelessWidget {
                 child: _ServiceCard(icon: s.$1, title: s.$2, body: s.$3),
               );
             }, childCount: _services.length),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: cols,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              childAspectRatio: cols == 1 ? 3.8 : 1.25,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 5,
+              mainAxisSpacing: 5,
+              childAspectRatio: 0.95,
             ),
           ),
         ),
@@ -619,17 +662,20 @@ class _ServiceCard extends StatelessWidget {
         color: _kCard,
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 36,
-            height: 36,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(9),
-              color: _kYellow.withOpacity(0.1),
-              border: Border.all(color: _kYellow.withOpacity(0.25)),
+          Flexible(
+            child: Container(
+              width: 35,
+              height: 35,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(9),
+                color: _kYellow.withOpacity(0.1),
+                border: Border.all(color: _kYellow.withOpacity(0.25)),
+              ),
+              child: Icon(icon, color: _kYellow, size: 18),
             ),
-            child: Icon(icon, color: _kYellow, size: 18),
           ),
           const SizedBox(height: 10),
           Text(
@@ -727,7 +773,7 @@ class _ProgramsPage extends StatelessWidget {
                   child: Text(
                     'Our Programs.',
                     style: TextStyle(
-                      fontSize: _R.fs(context, 50),
+                      fontSize: _R.fs(context, 40),
                       fontWeight: FontWeight.w900,
                       height: 1.02,
                       letterSpacing: -1,
@@ -861,7 +907,7 @@ class _ProgramCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10),
-                Row(
+                /*Row(
                   children: [
                     Text(
                       'EXPLORE PROGRAM',
@@ -879,7 +925,7 @@ class _ProgramCard extends StatelessWidget {
                       color: color.withOpacity(0.85),
                     ),
                   ],
-                ),
+                ),*/
               ],
             ),
           ),
@@ -948,7 +994,7 @@ class _BlogPage extends StatelessWidget {
                   child: Text(
                     'Cougar Blog.',
                     style: TextStyle(
-                      fontSize: _R.fs(context, 50),
+                      fontSize: _R.fs(context, 40),
                       fontWeight: FontWeight.w900,
                       height: 1.02,
                       letterSpacing: -1,
@@ -1186,7 +1232,7 @@ class _GetStartedPage extends StatelessWidget {
                 child: Text(
                   'Are You Ready ?',
                   style: TextStyle(
-                    fontSize: _R.fs(context, 50),
+                    fontSize: _R.fs(context, 40),
                     fontWeight: FontWeight.w900,
                     height: 0.95,
                     letterSpacing: -1.5,
@@ -1278,19 +1324,10 @@ class _TopBar extends StatelessWidget {
         Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              width: 30,
-              height: 30,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: _kYellow.withOpacity(0.55), width: 1),
-                color: _kMid,
-              ),
-              child: const Icon(
-                Icons.airplanemode_active,
-                size: 16,
-                color: _kYellow,
-              ),
+            SizedBox(
+
+             width: 40,
+              child: Image.asset('assets/images/cougar_img.png', fit: BoxFit.cover,),
             ),
             const SizedBox(width: 8),
             const Text(

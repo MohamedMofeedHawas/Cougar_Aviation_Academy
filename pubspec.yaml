@@ -53,7 +53,7 @@ dependencies:
   responsive_framework: ^1.4.0
 
   # Maps
-  google_maps_flutter: ^2.7.0
+  google_maps_flutter:
 
   # UI
   smooth_page_indicator: ^1.1.0
@@ -61,6 +61,7 @@ dependencies:
   visibility_detector: ^0.4.0+2
   font_awesome_flutter: ^10.7.0
   flutter_svg: ^2.0.10+1
+
 
   # Storage & Security
   crypto: ^3.0.3
@@ -75,6 +76,11 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^3.0.2
+  flutter_launcher_icons:
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/cougar_img.png"
 
   # Code Generation
   build_runner: any

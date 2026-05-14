@@ -442,13 +442,15 @@ class _SplashScreenState extends State<SplashScreen>
                                 color: _kYellow.withOpacity(0.5),
                               ),
                               const SizedBox(width: 8),
-                              Text(
-                                'Florida – USA  ·  Cougar Aviation Academy.',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  letterSpacing: 1.4,
-                                  fontWeight: FontWeight.w500,
-                                  color: _kYellow.withOpacity(0.85),
+                              Expanded(
+                                child: Text(
+                                  'Florida – USA · Cougar Aviation Academy.',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    letterSpacing: 1.4,
+                                    fontWeight: FontWeight.w500,
+                                    color: _kYellow.withOpacity(0.85),
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 8),

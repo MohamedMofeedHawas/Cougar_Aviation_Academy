@@ -1,3 +1,4 @@
+import 'package:cougar_app/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
@@ -318,7 +319,8 @@ class _HomeDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return  AppDrawer();
+   /*   Drawer(
       backgroundColor: AppColors.background,
       child: ListView(
         padding: EdgeInsets.zero,
@@ -342,12 +344,12 @@ class _HomeDrawer extends StatelessWidget {
           _buildItem(context, Icons.school, 'Courses', '/courses'),
           _buildItem(context, Icons.airplanemode_active, 'Fleet', '/fleet'),
           _buildItem(context, Icons.photo_library, 'Gallery', '/gallery'),
-          _buildItem(context, Icons.contact_mail, 'Contact', '/contact'),
+          _buildItem(context, Icons.contact_mail, 'Contact Us', '/contact'),
           const Divider(color: AppColors.divider),
           _buildItem(context, Icons.person, 'Profile', '/profile'),
         ],
       ),
-    );
+    );*/
   }
 
   Widget _buildItem(BuildContext context, IconData icon, String title, String route) {

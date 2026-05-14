@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../features/courses/data/models/course_detail_page.dart';
 import '../services/service_locator.dart';
 import '../services/prefs_service.dart';
 
@@ -96,6 +97,7 @@ class AppRouter {
           ),
         ],
       ),
+
       GoRoute(
         path: fleet,
         builder: (context, state) => const FleetPage(),
