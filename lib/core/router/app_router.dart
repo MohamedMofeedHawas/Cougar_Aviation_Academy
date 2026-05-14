@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../accommodations_page.dart';
 import '../../features/courses/data/models/course_detail_page.dart';
 import '../services/service_locator.dart';
 import '../services/prefs_service.dart';
@@ -31,6 +32,7 @@ class AppRouter {
   static const String about = '/about';
   static const String courses = '/courses';
   static const String fleet = '/fleet';
+  static const String accommodations = '/accommodations';
   static const String gallery = '/gallery';
   static const String contact = '/contact';
 
@@ -67,6 +69,7 @@ class AppRouter {
         path: onboarding,
         builder: (context, state) => const OnboardingPage(),
       ),
+      GoRoute(path: accommodations, builder: (context, state) => const AccommodationsPage()),
       GoRoute(
         path: home,
         builder: (context, state) => const HomePage(),
@@ -101,12 +104,12 @@ class AppRouter {
       GoRoute(
         path: fleet,
         builder: (context, state) => const FleetPage(),
-        routes: [
+        /*routes: [
           GoRoute(
             path: ':id',
             builder: (context, state) => AircraftDetailPage(id: state.pathParameters['id'] ?? '0'),
           ),
-        ],
+        ],*/
       ),
       GoRoute(
         path: gallery,

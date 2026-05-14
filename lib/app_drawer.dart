@@ -34,6 +34,12 @@ const _mainItems = [
       icon: Icons.airplanemode_active_rounded,
       label: 'Fleet',
       route: '/fleet'),
+
+  _NavItem(
+      icon: Icons.hotel,
+      label: 'Accommodations',
+      route: '/accommodations'),
+
   _NavItem(
       icon: Icons.photo_library_rounded,
       label: 'Gallery',

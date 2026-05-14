@@ -47,6 +47,7 @@ dependencies:
   flutter_animate: ^4.5.0
   animate_do: ^3.3.4
   animations: ^2.0.11
+  youtube_player_flutter:
 
   # Responsive UI
   flutter_screenutil: ^5.9.3

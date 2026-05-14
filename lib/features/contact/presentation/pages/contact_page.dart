@@ -306,10 +306,10 @@ class _HeroBand extends StatelessWidget {
                 'Seamless Communication,\nGlobal Impact.',
                 style: TextStyle(
                   color: _C.white,
-                  fontSize: 30,
+                  fontSize: 25,
                   fontWeight: FontWeight.w900,
                   height: 1.2,
-                  letterSpacing: -0.3,
+               //   letterSpacing: -0.3,
                 ),
               ),
               const SizedBox(height: 10),
