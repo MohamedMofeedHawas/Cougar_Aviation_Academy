@@ -436,6 +436,7 @@ class _SplashScreenState extends State<SplashScreen>
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                            const  SizedBox(width: 4,),
                               Container(
                                 width: 24,
                                 height: 1,
@@ -443,13 +444,15 @@ class _SplashScreenState extends State<SplashScreen>
                               ),
                               const SizedBox(width: 8),
                               Expanded(
-                                child: Text(
-                                  'Florida – USA · Cougar Aviation Academy.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    letterSpacing: 1.4,
-                                    fontWeight: FontWeight.w500,
-                                    color: _kYellow.withOpacity(0.85),
+                                child: Center(
+                                  child: Text(
+                                    'Florida – USA · Cougar Aviation Academy.',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      letterSpacing: 1.4,
+                                      fontWeight: FontWeight.w500,
+                                      color: _kYellow.withOpacity(0.85),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -459,6 +462,8 @@ class _SplashScreenState extends State<SplashScreen>
                                 height: 1,
                                 color: _kYellow.withOpacity(0.5),
                               ),
+                             const SizedBox(width: 4,),
+
                             ],
                           ),
                         ),

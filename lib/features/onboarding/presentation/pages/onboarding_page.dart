@@ -1151,26 +1151,7 @@ class _BlogCard extends StatelessWidget {
                     color: Colors.white.withOpacity(0.57),
                   ),
                 ),
-                const SizedBox(height: 10),
-                Row(
-                  children: [
-                    Text(
-                      'READ ARTICLE',
-                      style: TextStyle(
-                        fontSize: 9.5,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1.5,
-                        color: color.withOpacity(0.85),
-                      ),
-                    ),
-                    const SizedBox(width: 4),
-                    Icon(
-                      Icons.arrow_forward_rounded,
-                      size: 12,
-                      color: color.withOpacity(0.85),
-                    ),
-                  ],
-                ),
+
               ],
             ),
           ),

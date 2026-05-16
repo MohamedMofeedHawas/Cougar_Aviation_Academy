@@ -11,7 +11,6 @@ import 'features/auth/presentation/cubit/auth_cubit.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize Service Locator
   await initServiceLocator();
   
   runApp(const CougarApp());

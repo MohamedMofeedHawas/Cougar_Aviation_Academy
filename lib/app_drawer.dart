@@ -40,21 +40,22 @@ const _mainItems = [
       label: 'Accommodations',
       route: '/accommodations'),
 
+
   _NavItem(
-      icon: Icons.photo_library_rounded,
-      label: 'Gallery',
-      route: '/gallery'),
+      icon: Icons.newspaper,
+      label: 'Blog & News',
+      route: '/blogsAndNews'),
   _NavItem(
       icon: Icons.contact_mail_rounded,
       label: 'Contact Us',
       route: '/contact'),
 ];
 
-const _secondaryItems = [
+/*const _secondaryItems = [
   _NavItem(icon: Icons.person_rounded, label: 'Profile', route: '/profile'),
   _NavItem(
       icon: Icons.settings_rounded, label: 'Settings', route: '/settings'),
-];
+];*/
 
 // ─────────────────────────────────────────────────────────────────────────────
 // MAIN DRAWER
@@ -233,15 +234,15 @@ class _AppDrawerState extends State<AppDrawer>
                           const SizedBox(height: 14),
 
                           // Section label
-                          _SectionLabel(
+                         /* _SectionLabel(
                             label: 'ACCOUNT',
                             masterCtrl: _masterCtrl,
                             intervalStart: 0.76,
                           ),
-                          const SizedBox(height: 6),
+                          const SizedBox(height: 6),*/
 
                           // Secondary items
-                          ..._secondaryItems.asMap().entries.map((e) {
+                  /*        ..._secondaryItems.asMap().entries.map((e) {
                             return _AnimatedDrawerItem(
                               item: e.value,
                               index: _mainItems.length + e.key,
@@ -250,7 +251,7 @@ class _AppDrawerState extends State<AppDrawer>
                               isActive: _activeRoute == e.value.route,
                               onTap: () => _navigate(e.value.route),
                             );
-                          }),
+                          }),*/
                         ],
                       ),
                     ),

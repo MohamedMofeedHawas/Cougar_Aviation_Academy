@@ -1,3 +1,4 @@
+import 'package:cougar_app/blog_and_news.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../accommodations_page.dart';
@@ -33,8 +34,8 @@ class AppRouter {
   static const String courses = '/courses';
   static const String fleet = '/fleet';
   static const String accommodations = '/accommodations';
-  static const String gallery = '/gallery';
   static const String contact = '/contact';
+  static const String blogsAndNews = '/blogsAndNews';
 
   static final router = GoRouter(
     initialLocation: splash,
@@ -111,13 +112,13 @@ class AppRouter {
           ),
         ],*/
       ),
-      GoRoute(
-        path: gallery,
-        builder: (context, state) => const GalleryPage(),
-      ),
+
       GoRoute(
         path: contact,
         builder: (context, state) => const ContactPage(),
+      ), GoRoute(
+        path: blogsAndNews,
+        builder: (context, state) => const BlogAndNewsScreen(),
       ),
     ],
   );

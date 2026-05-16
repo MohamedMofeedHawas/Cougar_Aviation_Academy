@@ -1424,7 +1424,19 @@ class _PriceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: _kWhite,
+     margin: EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+        color: _kWhite,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: _kGold.withOpacity(0.4), width: 1.5),
+        boxShadow: [
+          BoxShadow(
+            color: _kGold.withOpacity(0.15),
+            blurRadius: 32, offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+
       padding: const EdgeInsets.symmetric(vertical: 56),
       alignment: Alignment.center,
       child: AnimatedBuilder(
@@ -1442,7 +1454,7 @@ class _PriceSection extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 56, vertical: 36),
           decoration: BoxDecoration(
-            color: _kNavy,
+            color: Colors.cyan.shade200,
             borderRadius: BorderRadius.circular(24),
             border: Border.all(color: _kGold.withOpacity(0.4), width: 1.5),
             boxShadow: [
@@ -1462,13 +1474,13 @@ class _PriceSection extends StatelessWidget {
                   shape: BoxShape.circle,
                   border: Border.all(color: _kGold.withOpacity(0.3)),
                 ),
-                child: const Icon(Icons.attach_money_rounded, color: _kGold, size: 32),
+                child: const Icon(Icons.attach_money_rounded, color: _kWhite, size: 32),
               ),
               const SizedBox(height: 16),
               const Text(
                 'Price',
                 style: TextStyle(
-                  color: _kGold, fontSize: 18,
+                  color: _kWhite, fontSize: 18,
                   fontWeight: FontWeight.w700, letterSpacing: 1,
                 ),
               ),
@@ -1476,7 +1488,7 @@ class _PriceSection extends StatelessWidget {
               const Text(
                 '\$1,000',
                 style: TextStyle(
-                  color: _kWhite, fontSize: 48,
+                  color: _kNavy, fontSize: 48,
                   fontWeight: FontWeight.w900, height: 1,
                 ),
               ),
